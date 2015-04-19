@@ -1,0 +1,37 @@
+<ons-page>
+  <ons-toolbar modifier="opacity">
+    <div class="left">
+      <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
+    </div>
+    <div class="center">Restaurants</div>
+  </ons-toolbar>
+
+  <div class="app-page">
+    <ons-list modifier="categories">
+      <ons-list-item modifier="chevron" class="list-item-container" ng-click="gallery.pushPage('restaurant-test.html');">
+        <ons-row>
+          <ons-col width="125px">
+            <img src="images/gallery/restaurants.png" class="thumbnail">
+          </ons-col>
+          <ons-col>
+            <div class="item-content">
+              <div class="name">
+                Restaurant Test
+              </div>
+              <div class="price-tag">
+                <i class="ion-pricetag"></i> -15% sur entrée/plat/dessert
+              </div>
+              <div class="desc">
+                Endroit très sympathique proche du pont de Neuilly...
+              </div>
+            </div>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>
+<div class="bottom">
+<ons-back-button><Retour</ons-back-button>
+</div>      
+
+  </div>
+
+</ons-page>  
