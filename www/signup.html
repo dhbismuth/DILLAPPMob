@@ -18,7 +18,8 @@
       <div class="signup-wrapper">
         <ons-row>
           <ons-col>
-            <input type="text" class="text-input--underbar width-full" placeholder="Prénom" value="">
+            <input ng-model="user.prenom" type="text" class="text-input--underbar width-full" placeholder="Prénom" value="">
+
           </ons-col>
           <ons-col width="15px"></ons-col>
           <ons-col>
@@ -44,7 +45,7 @@
 
         <ons-row>
           <ons-col>
-            <ons-button modifier="large">Je m'inscris</ons-button>
+            <ons-button modifier="large" ng-click="inscription(user.prenom)">Je m'inscris</ons-button>
           </ons-col>
         </ons-row>
       </div>
