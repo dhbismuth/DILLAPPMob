@@ -10,8 +10,12 @@
 (function(){
   'use strict';
  
-  var app = angular.module('app', ['onsen', 'angular-images-loaded', 'ngMap', 'angular-carousel']);
+  var app = angular.module('app', ['onsen', 'angular-images-loaded', 'ngMap', 'angular-carousel', 'azure-mobile-service.module']);
 
+  app.constant('AzureMobileServiceClient', {
+      API_URL: 'https://wib.azure-mobile.net/',
+      API_KEY: 'nHepqfAkPMbsVVdWwSxhGwBcfAnUgr55'
+  });
   // Filter to convert HTML content to string by removing all HTML tags
   app.filter('htmlToPlaintext', function() {
       return function(text) {

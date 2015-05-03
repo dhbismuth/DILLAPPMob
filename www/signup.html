@@ -8,53 +8,46 @@
     </div>
   </ons-toolbar>
 
-  <div class="signup-page">
-    <div class="signup-logo">
-      <h2 class="home-title">DILL</h2>
-      <p class="subtitle">Bon plans de proximité</p>
-    </div>
-
-    <div class="signup-form">
-      <div class="signup-wrapper">
-        <ons-row>
-          <ons-col>
-            <input ng-model="user.prenom" type="text" class="text-input--underbar width-full" placeholder="Prénom" value="">
-
-          </ons-col>
-          <ons-col width="15px"></ons-col>
-          <ons-col>
-            <input type="text" class="text-input--underbar width-full" placeholder="Nom" value="" >
-          </ons-col>
-        </ons-row>
-
-        <ons-row>
-          <ons-col>
-            <input type="text" class="text-input--underbar width-full" placeholder="Email" value="">
-          </ons-col>
-        </ons-row>
-
-        <ons-row>
-          <ons-col>
-            <input type="password" class="text-input--underbar width-full" placeholder="Mot de passe" value="">
-          </ons-col>
-        </ons-row>
-
-        <div class="lucent">
-          <p class="note">Mot de passe - 6 caractères minimum</p>
+    <div ng-controller="userCtrl" class="signup-page">
+        <div class="signup-logo">
+            <h2 class="home-title">DILL</h2>
+            <p class="subtitle">Bon plans de proximité</p>
         </div>
-
-        <ons-row>
-          <ons-col>
-            <ons-button modifier="large" ng-click="inscription(user.prenom)">Je m'inscris</ons-button>
-          </ons-col>
-        </ons-row>
-      </div>
+        <div class="signup-form">
+            <div class="signup-wrapper">
+                <ons-row>
+                    <ons-col>
+                        <input ng-model="user.prenom" type="text" class="text-input--underbar width-full" placeholder="Prénom" value="">
+                    </ons-col>
+                    <ons-col width="15px"></ons-col>
+                    <ons-col>
+                        <input ng-model="user.nom" type="text" class="text-input--underbar width-full" placeholder="Nom" value="">
+                    </ons-col>
+                </ons-row>
+                <ons-row>
+                    <ons-col>
+                        <input ng-model="user.email" type="text" class="text-input--underbar width-full" placeholder="Email" value="">
+                    </ons-col>
+                </ons-row>
+                <ons-row>
+                    <ons-col>
+                        <input ng-model="user.mdp" type="password" class="text-input--underbar width-full" placeholder="Mot de passe" value="">
+                    </ons-col>
+                </ons-row>
+                <div class="lucent">
+                    <p class="note">Mot de passe - 6 caractères minimum</p>
+                </div>
+                <ons-row>
+                    <ons-col>
+                        <ons-button modifier="large" ng-click="inscription(user.prenom, user.nom, user.email, user.mdp)">Je m'inscris</ons-button>
+                    </ons-col>
+                </ons-row>
+            </div>
+        </div>
+        <div class="blur">
+            <img src="images/bg1.png" class="bg">
+        </div>
     </div>
-
-    <div class="blur">
-      <img src="images/bg1.png" class="bg">
-    </div>
-  </div>
 
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
    <filter id="blur">
