@@ -15,4 +15,16 @@ app.controller('userCtrl', function ($scope, Azureservice) {
                });
 			};
 
+Azureservice.query('user',{
+            criteria: {
+            },
+        })
+       .then(function (items) {
+
+           $scope.items = items;
+
+       }, function (err) {
+           console.error('There was an error quering Azure ' + err);
+       });
+
 	});

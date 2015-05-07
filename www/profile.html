@@ -9,14 +9,13 @@
     </div>
   </ons-toolbar>
 
-  <div class="app-profile">
-
+  <div ng-controller="userCtrl" class="app-profile">
+ <ons-list-item class="profile-card" ng-repeat="item in items" class="list-item-container">
     <div class="profile-card">
 
       <img src="images/profiles/profile-image-01.png" class="profile-image">
-      <div class="profile-name">David Tahina</div>
-      <div class="profile-id">@davetahina</div>
-      <div class="profile-desc">Membre de l'équipe WIB</div>
+      <div class="profile-name"><p>{{item.firstName}} {{item.lastName}}</p></div> 
+      <div class="profile-id"><p>{{item.email}}</p></div>
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
         <filter id="blur">
           <feGaussianBlur stdDeviation="10" />
@@ -24,7 +23,7 @@
       </svg>
       <div class="black-overlay"></div>
       <div class="blur">
-        <img src="images/bg1.png" class="bg">
+        <img src="images/bg.png" class="bg">
       </div>
     </div>
 

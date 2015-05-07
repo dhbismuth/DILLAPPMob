@@ -7,52 +7,34 @@
       <div class="center">Tous les bons plan</div>
     </ons-toolbar>
 
-    <div class="app-page">
-
-      <ons-list modifier="locations">
-        <ons-list-item modifier="chevron" class="list-item-container" ng-click="locations.pushPage('restaurant-test.html');">
-          <ons-row>
-            <ons-col width="95px">
-              <img src="images/restaurant-test-thumb.png" class="thumbnail">
-            </ons-col>
-            <ons-col>
-              <div class="name">
-                Restaurant test
-              </div>
-              <div class="location">
-                <i class="fa fa-map-marker"></i> Pont de Neuilly
-              </div>
-              <div class="desc">
-                Ce restaurant est vraiment sympa et à tester...
-              </div>
-            </ons-col>
-            <ons-col width="40px"></ons-col>
-          </ons-row>
-        </ons-list-item>
-
-        <ons-list-item modifier="chevron" class="list-item-container" ng-click="locations.pushPage('soon.html');">
-          <ons-row>
-            <ons-col width="95px">
-              <img src="images/bar-test-thumb.png" class="thumbnail">
-            </ons-col>
-            <ons-col>
-              <div class="name">
-                Bar test
-              </div>
-              <div class="location">
-                <i class="fa fa-map-marker"></i> Pont de Neuilly
-              </div>
-              <div class="desc">
-                A tester...
-              </div>
-            </ons-col>
-            <ons-col width="40px"></ons-col>
-          </ons-row>
-        </ons-list-item>
-
-        
-
+      <div ng-controller="bpCtrl" class="app-page">
+        <ons-list modifier="categories">
+            <ons-list-item ng-repeat="item in items" modifier="chevron" class="list-item-container" ng-click="#">
+                <ons-row>
+                    <ons-col width="125px">
+                        <img src="images/gallery/restaurants.png" class="thumbnail">
+                    </ons-col>
+                    <ons-col>
+                        <div class="item-content">
+                            <div class="name">
+                                <p>{{item.lieu}}</p>
+                            </div>
+                            <div class="price-tag">
+                                <i class="ion-pricetag"><p>{{item.intitule}}</p></i>
+                            </div>
+                            <div class="desc">
+                                <p>{{item.adresse}}</p>
+                            </div>
+                        </div>
+                    </ons-col>
+                </ons-row>
+            </ons-list-item>
+            <div class="bottom">
+                <ons-back-button><retour</ons-back-button>
+            </div>
     </div>
+
+      <
 
   </ons-page>
 </ons-navigator>   

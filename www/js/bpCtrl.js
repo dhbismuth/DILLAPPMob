@@ -1,6 +1,6 @@
 app.controller('bpCtrl', function ($scope, Azureservice) {
 
-    Azureservice.query('bonplan', {
+    Azureservice.query('bonplan',{
             criteria: {
             },
         })
@@ -11,5 +11,5 @@ app.controller('bpCtrl', function ($scope, Azureservice) {
        }, function (err) {
            console.error('There was an error quering Azure ' + err);
        });
-	   
+
 	});

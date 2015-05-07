@@ -6,9 +6,9 @@
     <div class="center">Restaurants</div>
   </ons-toolbar>
 
-    <div ng-controller="bpCtrl" class="app-page" ng-repeat="item in items">
+    <div ng-controller="bpCtrl" class="app-page">
         <ons-list modifier="categories">
-            <ons-list-item modifier="chevron" class="list-item-container" ng-click="gallery.pushPage('restaurant-test.html');">
+            <ons-list-item ng-repeat="item in items" modifier="chevron" class="list-item-container" ng-click="#">
                 <ons-row>
                     <ons-col width="125px">
                         <img src="images/gallery/restaurants.png" class="thumbnail">
@@ -16,13 +16,13 @@
                     <ons-col>
                         <div class="item-content">
                             <div class="name">
-                                {{item.lieu}}
+                                <p>{{item.lieu}}</p>
                             </div>
                             <div class="price-tag">
-                                <i class="ion-pricetag"></i> {{item.intitule}}
+                                <i class="ion-pricetag"><p>{{item.intitule}}</p></i>
                             </div>
                             <div class="desc">
-                                Endroit très sympathique proche du pont de Neuilly...
+                                <p>{{item.adresse}}</p>
                             </div>
                         </div>
                     </ons-col>
@@ -34,3 +34,6 @@
     </div>
 
 </ons-page>  
+
+
+
